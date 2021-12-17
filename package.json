@@ -1,0 +1,20 @@
+{
+  "name": "epic-login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^16.0.3"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "is-electron": "^2.2.1",
+    "open": "^8.4.0",
+    "ws": "^8.3.0"
+  }
+}

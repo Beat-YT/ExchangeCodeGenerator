@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        div {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .copy {
+            display: inline-block;
+            font-size:24px;
+            position:absolute;
+            margin-left: 5%
+        }
+
+        body {
+            font-size: x-large;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .spoiler {
+            filter: blur(8px);
+            transition: 0.15s filter linear;
+        }
+
+        .spoiler:hover {
+            filter: blur(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="center">
+        <span>
+            <p>Your exchange code is</p>
+            <span>
+                <span class='spoiler' id='code'>696969696969696969</span>
+                <button class='copy' onclick="copy()"><i id='copy' class="fa fa-copy"></i></button>
+            </span>
+        </span>
+
+        <br /><br /><br /><br />
+        <button id='log-me-out-lol' onclick="LogMeOFFFFFFFF()">Log out</button>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            var input = document.body.appendChild(document.createElement("input"));
+            input.value = text;
+            input.focus();
+            input.select();
+            document.execCommand('copy');
+            input.parentNode.removeChild(input);
+        }
+
+        var timeout = undefined;
+
+        function copy() {
+            copyToClipboard(code);
+            var copy = document.getElementById('copy')
+            copy.className = 'fa fa-check'
+
+            timeout = setTimeout(() => {
+                copy.className = 'fa fa-copy'
+            }, 800)
+        }
+
+        function LogMeOFFFFFFFF() {
+            document.location.replace(`https://accounts.epicgames.com/logout?redirectUrl=${encodeURIComponent('https://www.epicgames.com/id/login?client_id=34a02cf8f4414e29b15921876da36f9a')}`)
+        }
+    </script>
+
+</body>
+
+</html>
